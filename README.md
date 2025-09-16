@@ -1,6 +1,27 @@
-# Fitness Class Booking App
+# 🧘‍♀️ Fitness Class Booking App
 
-A modern React Native application built with Expo and TypeScript for browsing and booking fitness classes. This project demonstrates clean architecture, intuitive UI/UX design, and predictable state management.
+<div align="center">
+  <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Native" />
+  <img src="https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white" alt="Expo" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Indian_Theme-FF6B35?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMTMuMDkgOC4yNkwyMCA5TDEzLjA5IDE1Ljc0TDEyIDIyTDEwLjkxIDE1Ljc0TDQgOUwxMC45MSA4LjI2TDEyIDJaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K" alt="Indian Theme" />
+</div>
+
+<p align="center">
+  <strong>A modern React Native application built with Expo and TypeScript for browsing and booking fitness classes.</strong>
+  <br>
+  Features beautiful Indian-themed design with smooth animations and intuitive user experience.
+</p>
+
+<div align="center">
+  <a href="#features">Features</a> •
+  <a href="#quick-start">Quick Start</a> •
+  <a href="#demo">Demo</a> •
+  <a href="#tech-stack">Tech Stack</a> •
+  <a href="#project-structure">Structure</a>
+</div>
+
+---
 
 ## Features
 
@@ -58,18 +79,19 @@ src/
 - **Shadows**: Layered shadow system for depth
 - **Border Radius**: Consistent corner radius values
 
-## Setup Instructions
+## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js (v16 or later)
+- Node.js (v16 or later) 
 - npm or yarn
-- Expo CLI (optional, but recommended)
+- Expo Go app on your mobile device (or simulator)
 
 ### Installation
+
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd fitness-class-booking-app
+   git clone https://github.com/35sonu/Browse-Class.git
+   cd Browse-Class
    ```
 
 2. **Install dependencies**
@@ -83,14 +105,25 @@ src/
    ```
 
 4. **Run on your device**
-   - Install Expo Go app on your mobile device
-   - Scan the QR code from the terminal/browser
-   - Or use an emulator: press 'a' for Android, 'i' for iOS
+   - 📱 **Mobile**: Install [Expo Go](https://expo.dev/client) and scan the QR code
+   - 💻 **Web**: Press `w` or visit `http://localhost:8081`
+   - 🤖 **Android**: Press `a` (requires Android Studio/emulator)
+   - 🍏 **iOS**: Press `i` (requires Xcode - macOS only)
 
-### Alternative Run Commands
-- **Web**: `npm run web`
-- **Android**: `npm run android`
-- **iOS**: `npm run ios` (macOS only)
+### Quick Commands
+```bash
+# Start development server
+npm start
+
+# Run on web browser
+npm run web
+
+# Run on Android
+npm run android
+
+# Run on iOS
+npm run ios
+```
 
 ## Key Design Decisions
 
