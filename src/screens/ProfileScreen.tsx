@@ -29,23 +29,38 @@ const STORAGE_KEY = '@user_profile';
 export default function ProfileScreen() {
   const [user, setUser] = useState<User>(mockUser);
   const [isEditing, setIsEditing] = useState(false);
-  const [tempName, setTempName] = useState(user.name);
+  const [tempName, setTempName] = useState(mockUser.name);
   const [modalVisible, setModalVisible] = useState(false);
 
   // Load user data from storage on mount
   useEffect(() => {
-    loadUserData();
+    // Clear cached data in development to ensure fresh mock data loads
+    if (__DEV__) {
+      AsyncStorage.removeItem(STORAGE_KEY).then(() => {
+        loadUserData();
+      });
+    } else {
+      loadUserData();
+    }
   }, []);
 
   const loadUserData = async () => {
     try {
       const storedUser = await AsyncStorage.getItem(STORAGE_KEY);
       if (storedUser) {
-        setUser(JSON.parse(storedUser));
-        setTempName(JSON.parse(storedUser).name);
+        const userData = JSON.parse(storedUser);
+        setUser(userData);
+        setTempName(userData.name);
+      } else {
+        // Use fresh mock data if no cached data exists
+        setUser(mockUser);
+        setTempName(mockUser.name);
       }
     } catch (error) {
       console.error('Error loading user data:', error);
+      // Fallback to mock data on error
+      setUser(mockUser);
+      setTempName(mockUser.name);
     }
   };
 
